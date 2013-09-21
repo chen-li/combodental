@@ -154,59 +154,66 @@ function wpsc_pagination( $totalpages = '', $per_page = '', $current_page = '', 
 	$output = __('','wpsc');
 	if(get_option('permalink_structure')){
 		// Should we show the FIRST PAGE link?
-		if($current_page > 1)
-			$output .= "<a class=\"first-page\" href=\"". esc_url( $page_link . $additional_links ) . "\" title=\"" . __('First Page', 'wpsc') . "\">" . __('&laquo; First', 'wpsc') . "</a>";
+//		if($current_page > 1)
+//			$output .= "<a class=\"first-page\" href=\"". esc_url( $page_link . $additional_links ) . "\" title=\"" . __('First Page', 'wpsc') . "\">" . __('&laquo; First', 'wpsc') . "</a>";
 
 		// Should we show the PREVIOUS PAGE link?
 		if($current_page > 1) {
 			$previous_page = $current_page - 1;
 			if( $previous_page == 1 )
-				$output .= " <a href=\"". esc_url( $page_link . $additional_links ) . "\" title=\"" . __('Previous Page', 'wpsc') . "\">" . __('&lt; Previous', 'wpsc') . "</a>";
+				$output .= "<span class=\"prev\"><a href=\"". esc_url( $page_link . $additional_links ) . "\" title=\"" . __('Previous Page', 'wpsc') . "\"><i class=\"icon-placeholder\"></i>" . __('Previous', 'wpsc') . "</a></span>";
 			else
-				$output .= " <a href=\"". esc_url( $page_link .$separator. $previous_page . $additional_links ) . "\" title=\"" . __('Previous Page', 'wpsc') . "\">" . __('&lt; Previous', 'wpsc') . "</a>";
-		}
-		$i =$current_page - $num_paged_links;
-		$count = 1;
-		if($i <= 0) $i =1;
-		while($i < $current_page){
-			if($count <= $num_paged_links){
-				if($count == 1)
-					$output .= " <a href=\"". esc_url( $page_link . $additional_links ) . "\" title=\"" . sprintf( __('Page %s', 'wpsc'), $i ) . " \">".$i."</a>";
-				else
-					$output .= " <a href=\"". esc_url( $page_link .$separator. $i . '/' . $additional_links ) . "\" title=\"" . sprintf( __('Page %s', 'wpsc'), $i ) . " \">".$i."</a>";
-			}
-			$i++;
-			$count++;
-		}
-		// Current Page Number
-		if($current_page > 0)
-			$output .= "<span class='current'>$current_page</span>";
-
-		//Links after Current Page
-		$i = $current_page + $num_paged_links;
-		$count = 1;
-
-		if($current_page < $totalpages){
-			while(($i) > $current_page){
-
-				if($count < $num_paged_links && ($count+$current_page) <= $totalpages){
-						$output .= " <a href=\"". esc_url( $page_link .$separator. ($count+$current_page) . '/' .$additional_links ) . "\" title=\"" . sprintf( __('Page %s', 'wpsc'), ($count+$current_page) ) . "\">".($count+$current_page)."</a>";
-				$i++;
-				}else{
-				break;
-				}
-				$count ++;
-			}
-		}
-
+				$output .= "<span class=\"prev\"><a href=\"". esc_url( $page_link .$separator. $previous_page . $additional_links ) . "\" title=\"" . __('Previous Page', 'wpsc') . "\"><i class=\"icon-placeholder\"></i>" . __('Previous', 'wpsc') . "</a></span>";
+		} else {
+			$output .= "<span class=\"prev disabled\"><i class=\"icon-placeholder\"></i>" . __('Previous', 'wpsc') . "</span>";
+        }
+        // Should we show the NEXT PAGE link?
 		if($current_page < $totalpages) {
 			$next_page = $current_page + 1;
-			$output .= "<a href=\"". esc_url( $page_link  .$separator. $next_page . '/' . $additional_links ) . "\" title=\"" . __('Next Page', 'wpsc') . "\">" . __('Next &gt;', 'wpsc') . "</a>";
-		}
+			$output .= "<span class=\"next\"><a href=\"". esc_url( $page_link  .$separator. $next_page . '/' . $additional_links ) . "\" title=\"" . __('Next Page', 'wpsc') . "\">" . __('Next', 'wpsc') . "<i class=\"icon-placeholder\"></i></a></span>";
+		} else {
+			$output .= "<span class=\"next disabled\">" . __('Next', 'wpsc') . "<i class=\"icon-placeholder\"></i></span>";
+        }
+
+        $output .= "<span class=\"numbers\">";
+            $i =$current_page - $num_paged_links;
+            $count = 1;
+            if($i <= 0) $i =1;
+            while($i < $current_page){
+                if($count <= $num_paged_links){
+                    if($count == 1)
+                        $output .= " <a href=\"". esc_url( $page_link . $additional_links ) . "\" title=\"" . sprintf( __('Page %s', 'wpsc'), $i ) . " \">".$i."</a>";
+                    else
+                        $output .= " <a href=\"". esc_url( $page_link .$separator. $i . '/' . $additional_links ) . "\" title=\"" . sprintf( __('Page %s', 'wpsc'), $i ) . " \">".$i."</a>";
+                }
+                $i++;
+                $count++;
+            }
+            // Current Page Number
+            if($current_page > 0)
+                $output .= "<span class='current'>$current_page</span>";
+
+            //Links after Current Page
+            $i = $current_page + $num_paged_links;
+            $count = 1;
+
+            if($current_page < $totalpages){
+                while(($i) > $current_page){
+
+                    if($count < $num_paged_links && ($count+$current_page) <= $totalpages){
+                            $output .= " <a href=\"". esc_url( $page_link .$separator. ($count+$current_page) . '/' .$additional_links ) . "\" title=\"" . sprintf( __('Page %s', 'wpsc'), ($count+$current_page) ) . "\">".($count+$current_page)."</a>";
+                    $i++;
+                    }else{
+                    break;
+                    }
+                    $count ++;
+                }
+            }
+        $output .= "</span>";
 		// Should we show the LAST PAGE link?
-		if($current_page < $totalpages) {
-			$output .= "<a href=\"". esc_url( $page_link  .$separator. $totalpages . '/' . $additional_links ) . "\" title=\"" . __('Last Page', 'wpsc') . "\">" . __('Last &raquo;', 'wpsc') . "</a>";
-		}
+//		if($current_page < $totalpages) {
+//			$output .= "<a href=\"". esc_url( $page_link  .$separator. $totalpages . '/' . $additional_links ) . "\" title=\"" . __('Last Page', 'wpsc') . "\">" . __('Last &raquo;', 'wpsc') . "</a>";
+//		}
 	} else {
 		// Should we show the FIRST PAGE link?
 //		if($current_page > 1)

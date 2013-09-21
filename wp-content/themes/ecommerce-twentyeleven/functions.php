@@ -148,3 +148,81 @@ function sb_get_images_for_product($id){
     }
 }
 
+function wpbeginner_numeric_posts_nav() {
+
+    if( is_singular() )
+        return;
+
+    global $wp_query;
+
+    /** Stop execution if there's only 1 page */
+    if( $wp_query->max_num_pages < 1 )
+        return;
+    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+    $max   = intval( $wp_query->max_num_pages );
+
+    /** Add current page to the array */
+    if ( $paged >= 1 )
+        $links[] = $paged;
+
+    /** Add the pages around the current page to the array */
+    if ( $paged >= 3 ) {
+        $links[] = $paged - 1;
+        $links[] = $paged - 2;
+    }
+
+    if ( ( $paged + 2 ) <= $max ) {
+        $links[] = $paged + 2;
+        $links[] = $paged + 1;
+    }
+
+    echo '<div class="navigation paging">' . "\n";
+
+    /** Previous Post Link */
+    if ( get_previous_posts_link() )
+        printf( '%s' . "\n", get_previous_posts_link() );
+
+    echo '<span class="numbers">';
+    /** Link to first page, plus ellipses if necessary */
+    if ( ! in_array( 1, $links ) ) {
+
+        if (1 == $paged) {
+            printf( '<span class="current">%s</span>' . "\n", 1 );
+        } else {
+            printf( '<a href="%s">%s</a>' . "\n", esc_url( get_pagenum_link( 1 ) ), '1' );
+        }
+
+//        if ( ! in_array( 2, $links ) )
+//            echo ' … ';
+    }
+
+    /** Link to current page, plus 2 pages in either direction if necessary */
+    sort( $links );
+    foreach ( (array) $links as $link ) {
+        if ($paged == $link) {
+            printf( '<span class="current">%s</span>' . "\n", $link );
+        } else {
+            printf( '<a href="%s">%s</a>' . "\n", esc_url( get_pagenum_link( $link ) ), $link );
+        }
+    }
+
+    /** Link to last page, plus ellipses if necessary */
+    if ( ! in_array( $max, $links ) ) {
+//        if ( ! in_array( $max - 1, $links ) )
+//            echo ' … ';
+
+        if ($paged == $max) {
+            printf( '<span class="current">%s</span>' . "\n", $max );
+        } else {
+            printf( '<a href="%s">%s</a>' . "\n", esc_url( get_pagenum_link( $max ) ), $max );
+        }
+    }
+    echo '</span>';
+
+    /** Next Post Link */
+    if ( get_next_posts_link() )
+        printf( '%s' . "\n", get_next_posts_link() );
+
+    echo '</div>' . "\n";
+
+}

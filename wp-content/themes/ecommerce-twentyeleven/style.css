@@ -933,6 +933,10 @@ a:hover {
 .entry-summary {
 	padding: 20px 0 0;
 }
+.singular.entry-content p {
+    padding-bottom: 20px;
+    font-size: 14px;
+}
 .entry-content h1,
 .entry-content h2,
 .comment-content h1,

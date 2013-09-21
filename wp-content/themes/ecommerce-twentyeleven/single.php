@@ -14,19 +14,21 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<nav id="nav-single">
-						<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
-						<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'twentyeleven' ) ); ?></span>
-						<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></span>
-					</nav><!-- #nav-single -->
+                    <?php if (false) : ?>
+                        <nav id="nav-single">
+                            <h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
+                            <span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'twentyeleven' ) ); ?></span>
+                            <span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></span>
+                        </nav><!-- #nav-single -->
+                    <?php endif; ?>
 
 					<?php get_template_part( 'content', 'single' ); ?>
 
-					<?php if ( is_active_sidebar( 'sidebar-related' ) ) : ?>
-                        <?php dynamic_sidebar( 'sidebar-related' ); ?>
-                    <?php endif; ?>
+					<?php // if ( is_active_sidebar( 'sidebar-related' ) ) : ?>
+                        <?php // dynamic_sidebar( 'sidebar-related' ); ?>
+                    <?php // endif; ?>
 
-					<?php comments_template( '', true ); ?>
+					<?php // comments_template( '', true ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 

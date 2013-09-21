@@ -1534,12 +1534,14 @@ function get_next_posts_link( $label = null, $max_page = 0 ) {
 	$nextpage = intval($paged) + 1;
 
 	if ( null === $label )
-		$label = __( 'Next Page &raquo;' );
+		$label = __( 'Next' );
 
 	if ( !is_single() && ( $nextpage <= $max_page ) ) {
 		$attr = apply_filters( 'next_posts_link_attributes', '' );
-		return '<a href="' . next_posts( $max_page, false ) . "\" $attr>" . preg_replace('/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label) . '</a>';
-	}
+		return '<span class="next"><a href="' . next_posts( $max_page, false ) . "\" $attr>" . preg_replace('/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label) . '<i class="icon-placeholder"></i></a></span>';
+	} else {
+		return '<span class="next disabled">' . preg_replace('/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label) . '<i class="icon-placeholder"></i></span>';
+    }
 }
 
 /**
@@ -1605,12 +1607,14 @@ function get_previous_posts_link( $label = null ) {
 	global $paged;
 
 	if ( null === $label )
-		$label = __( '&laquo; Previous Page' );
+		$label = __( 'Previous' );
 
 	if ( !is_single() && $paged > 1 ) {
 		$attr = apply_filters( 'previous_posts_link_attributes', '' );
-		return '<a href="' . previous_posts( false ) . "\" $attr>". preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label ) .'</a>';
-	}
+		return '<span class="prev"><a href="' . previous_posts( false ) . "\" $attr ><i class='icon-placeholder'></i>". preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label ) .'</a></span>';
+	} else {
+		return '<span class="prev disabled"><i class="icon-placeholder"></i>' . preg_replace( '/&([^#])(?![a-z]{1,8};)/i', '&#038;$1', $label ) .'</span>';
+    }
 }
 
 /**
