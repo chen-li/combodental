@@ -27,7 +27,7 @@ get_header(); ?>
 
                 <section class="home-info">
                     <div class="home-about">
-                        <h2>About Us<a class="more" href="/about-us">More <i class="icon-placeholder"></i></a></h2>
+                        <h2><a class="more" href="/about-us">More <i class="icon-placeholder"></i></a>About Us</h2>
                         <article>
                             <h3>Welcome to <?php bloginfo( 'name' ); ?></h3>
                             Dui nisi bibendum lectus, ac rutrum neque elit et turpis. Etiam at tortor enim. Nulla pretium euismod mattis. Donec vel condimentum sem, vel euismod eros. Morbi adipiscing justo ut magna vestibulum fringilla. Praesent pellentesque ullamcorper imperdiet. Pellentesque et turpis ut nunc pulvinar ornare nec et lectus. Aliquam fermentum faucibus arcu, eget aliquam nunc bibendum et.
@@ -35,7 +35,7 @@ get_header(); ?>
                     </div>
 
                     <div class="home-news">
-                        <h2>Latest News<a class="more" href="/news">Read All <i class="icon-placeholder"></i></a></h2>
+                        <h2><a class="more" href="/news">Read All <i class="icon-placeholder"></i></a>Latest News</h2>
                         <article>
                             <?php
                             $args = array( 'numberposts' => 1 );
@@ -47,7 +47,7 @@ get_header(); ?>
                                     $content = apply_filters( 'the_content', $content );
                                     $content = str_replace( ']]>', ']]&gt;', $content );
                                     $content = strip_tags($content);
-                                    $max = 450;
+                                    $max = 400;
                                     echo (strlen($content) > $max) ? substr($content, 0, $max) . ' ...' : $content;
                                 ?>
                             <?php endforeach; ?>

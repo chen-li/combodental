@@ -799,6 +799,10 @@ a:hover {
     position: relative;
     top: 4px;
 }
+#ie7 #primary .home-about h2 .more .icon-placeholder,
+#ie7 #primary .home-news h2 .more .icon-placeholder {
+    top: 2px;
+}
 #primary .home-about article,
 #primary .home-news article {
     border-top: 1px solid #e5e5e5;
@@ -1049,7 +1053,6 @@ a:hover {
     padding: 20px;
 }
 #primary .contact-us .company dl {
-    clear: both;
 }
 #primary .contact-us .company dt {
     float: left;
