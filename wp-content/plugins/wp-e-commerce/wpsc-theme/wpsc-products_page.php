@@ -220,6 +220,7 @@ $image_width = get_option('product_image_width');
 		<?php endif ; ?>
 	    <?php do_action( 'wpsc_theme_footer' ); ?>
 
+        <div style="clear: both;"></div>
 		<?php if(wpsc_has_pages_bottom()) : ?>
 			<div class="wpsc_page_numbers_bottom paging">
 				<?php wpsc_pagination(); ?>
