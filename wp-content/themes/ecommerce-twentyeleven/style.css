@@ -968,6 +968,9 @@ a:hover {
     border-radius: 5px;
     padding: 10px;
 }
+.single_product_display .productcol .wpsc_product_price p {
+    padding: 0;
+}
 
 /* news */
 .news .entry-content .post {
