@@ -279,7 +279,8 @@ body, input, textarea {
 	line-height: 1.625;
 }
 body {
-	background: #000;
+	background-color: #000;
+    min-width: 960px;
 }
 #page {
 	background: #fff;
@@ -321,13 +322,11 @@ ul ul, ol ol, ul ol, ol ul {
 	margin-bottom: 0;
 }
 dl {
-	margin: 0 1.625em;
 }
 dt {
 	font-weight: bold;
 }
 dd {
-	margin-bottom: 1.625em;
 }
 strong {
 	font-weight: bold;
@@ -754,6 +753,9 @@ a:hover {
 #main {
 	clear: both;
 }
+.entry-content p {
+    padding-bottom: 18px;
+}
 #primary .header-image {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -852,7 +854,8 @@ a:hover {
     margin-bottom: 40px;
 }
 /* product listing page */
-#primary .wpsc-product .wpsc_container {
+.wpsc_default_product_list .productcol p {
+    padding: 0;
 }
 .wpsc_default_product_list .default_product_display {
     float: left;
@@ -904,9 +907,7 @@ a:hover {
     border-radius: 5px;
     padding: 10px;
 }
-.single_product_display .productcol .product_description p {
-    padding: 0 0 18px;
-}
+
 /* news */
 .news .entry-content .post {
     border-color: #E5E5E5 #E5E5E5 #0066CC;
@@ -932,9 +933,6 @@ a:hover {
     padding: 16px 20px;
     max-height: 35px;
     overflow: hidden;
-}
-.news .entry-content .post .post-content p {
-    padding-bottom: 18px;
 }
 .news .entry-content .post footer {
     border-color: #E5E5E5;
@@ -968,6 +966,110 @@ a:hover {
 .news .entry-content .post footer.expanded:hover .toggle .icon-placeholder {
     background-position: -96px -128px;
 }
+/* contact us */
+#primary .contact-us .company {
+    width: 290px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 20px;
+    float: left;
+}
+#primary .contact-us .contact-form {
+    width: 310px;
+    float: right;
+    background-color: #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 20px;
+}
+#primary .contact-us .company dl {
+    clear: both;
+}
+#primary .contact-us .company dt {
+    float: left;
+    width: 80px;
+}
+#primary .contact-us .company dd {
+    float: left;
+    width: 210px;
+    margin-bottom: 15px;
+}
+#primary .contact-us .contact-form .input {
+    position: relative;
+    margin-bottom: 15px;
+}
+#primary .contact-us .contact-form label {
+    background-color: #eee;
+    -webkit-box-shadow: 1px 2px 2px rgba(204, 204, 204, 0.8);
+    box-shadow: 1px 2px 2px rgba(204, 204, 204, 0.8);
+    color: #555555;
+    display: inline-block;
+    left: 4px;
+    min-width: 60px;
+    padding: 4px 10px;
+    position: absolute;
+    top: 3px;
+    z-index: 1;
+}
+#primary .contact-us .contact-form input[type="text"],
+#primary .contact-us .contact-form textarea {
+    background-color: #fff;
+    border: 4px solid #eee;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 3px rgba(204, 204, 204, 0.95) inset;
+    box-shadow: 0 1px 3px rgba(204, 204, 204, 0.95) inset;
+    padding: 10px;
+    text-indent: 80px;
+    width: 282px;
+    height: 18px;
+}
+#primary .contact-us .contact-form input.no-text-indent,
+#primary .contact-us .contact-form textarea.no-text-indent {
+    text-indent: 0;
+}
+#primary .contact-us .contact-form textarea {
+    height: 157px;
+    overflow: auto;
+}
+#primary .contact-us .contact-form .submit {
+    float: right;
+}
+#primary .contact-us .contact-form .error input,
+#primary .contact-us .contact-form .error textarea {
+    border-color: #ff9090;
+}
+#primary .contact-us .contact-form .error label {
+    background-color: #ff9090;
+}
+#primary .contact-us .contact-form .error_message {
+    color: #d70000;
+    text-align: right;
+}
+#primary .contact-us .contact-form .thank-you h3 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#primary .contact-us .contact-form .thank-you .green-tick {
+    text-align: center;
+}
+#primary .contact-us .contact-form .thank-you .green-tick img {
+    width: 200px;
+}
+/* download */
+#primary .entry-content .wpdm_file {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+#primary .entry-content .wpdm_file h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .hentry,
 .no-results {
 }
@@ -2054,6 +2156,7 @@ section.recent-posts .other-recent-posts li:after {
 #secondary aside.contact-us dl {
     color: #727272;
     clear: both;
+    margin-left: 17px;
 }
 #secondary aside.contact-us dt,
 #secondary aside.contact-us dd {

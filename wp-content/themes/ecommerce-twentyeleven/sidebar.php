@@ -30,16 +30,16 @@ if ( 'content' != $current_layout ) :
 				<aside class="contact-us">
 					<h3 class="widget-title">Contact Us</h3>
                     <dl>
-                        <dt>Email:</dt>
-                        <dd>puxia2011@gmail.com</dd>
+                        <dt>Address:</dt>
+                        <dd>Shangyu City <br /> Chapter Town <br /> Industrial Park</dd>
                     </dl>
                     <dl>
                         <dt>Phone:</dt>
                         <dd>0575-82097708</dd>
                     </dl>
                     <dl>
-                        <dt>Address:</dt>
-                        <dd>Shangyu City <br /> Chapter Town <br /> Industrial Park</dd>
+                        <dt>Fax:</dt>
+                        <dd>0575-82097700<br />0575-82097288</dd>
                     </dl>
 				</aside>
 

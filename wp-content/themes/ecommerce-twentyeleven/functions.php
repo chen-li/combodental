@@ -226,3 +226,15 @@ function wpbeginner_numeric_posts_nav() {
     echo '</div>' . "\n";
 
 }
+
+function wptuts_get_the_ip() {
+    if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
+        return $_SERVER["HTTP_X_FORWARDED_FOR"];
+    }
+    elseif (isset($_SERVER["HTTP_CLIENT_IP"])) {
+        return $_SERVER["HTTP_CLIENT_IP"];
+    }
+    else {
+        return $_SERVER["REMOTE_ADDR"];
+    }
+}

@@ -18,7 +18,7 @@
 	<footer id="footer-wrap" role="contentinfo">
         <div id="footer">
 			<div id="site-generator">
-                Copyright &copy; <?php echo date('Y'); ?>. All Rights Reserved. Powered by <?php bloginfo( 'name' ); ?>
+                &copy; <?php bloginfo( 'name' ); ?> <?php echo date('Y'); ?>. All Rights Reserved.
 			</div>
         </div>
 	</footer><!-- #colophon -->

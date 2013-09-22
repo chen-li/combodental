@@ -113,9 +113,20 @@ jQuery(document).ready(function(){
                 }).removeClass('no-shadow');
                 $this.removeClass('expanded');
             });
-
         }
 	});
+
+	jQuery(".contact-form").on({
+        focusin: function() {
+            jQuery(this).addClass('no-text-indent').siblings('label').hide();
+        },
+        focusout: function() {
+            var $this = jQuery(this);
+            if ($this.val() == null || $this.val() == '') {
+                $this.removeClass('no-text-indent').siblings('label').show();
+            }
+        }
+    }, "input, textarea");
 });
 </script>
 
@@ -131,7 +142,7 @@ jQuery(document).ready(function(){
 
                 <div class="contact">
                     <p>
-                        To Order Call: 0575-82097708 <br />
+                        Call Us: 0575-82097708 <br />
                         <span>Monday-Saturday 9am-5pm</span>
                     </p>
                 </div>
