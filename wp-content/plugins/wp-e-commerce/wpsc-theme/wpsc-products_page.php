@@ -204,7 +204,7 @@ $image_width = get_option('product_image_width');
 
 					<?php // */ ?>
 				</div><!--close productcol-->
-                <a class="btn btn-primary" href="<?php echo esc_url( wpsc_the_product_permalink() ); ?>">View</a>
+                <?php if(false) : ?><a class="btn btn-primary" href="<?php echo esc_url( wpsc_the_product_permalink() ); ?>">View</a><?php endif; ?>
                 <div class="entry-utility wpsc_product_utility">
                     <?php edit_post_link( __( 'Edit', 'wpsc' ), '<span class="edit-link">', '</span>' ); ?>
                 </div>
