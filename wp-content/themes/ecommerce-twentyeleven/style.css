@@ -753,6 +753,63 @@ a:hover {
 #main {
 	clear: both;
 }
+#primary .home-info {
+    padding: 20px 0;
+}
+#primary .home-about,
+#primary .home-news  {
+    width: 338px;
+    margin-bottom: 40px;
+    background-color: #fafafa;
+    border: 1px solid #e5e5e5;
+    border-top: 3px solid #06c;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    min-height: 245px;
+}
+#primary .home-about {
+    float: left;
+}
+#primary .home-news {
+    float: right;
+}
+#primary .home-about h2,
+#primary .home-news h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2E85DC;
+    padding: 5px 15px;
+    border: 0;
+    margin-bottom: 0;
+}
+#primary .home-about h2 .more,
+#primary .home-news h2 .more {
+    float: right;
+    font-size: 12px;
+    margin-top: 4px;
+}
+#primary .home-about h2 .more .icon-placeholder,
+#primary .home-news h2 .more .icon-placeholder {
+    width: 16px;
+    height: 16px;
+    background-image: url(images/sprite-blue.png);
+    background-position: -32px -64px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+}
+#primary .home-about article,
+#primary .home-news article {
+    border-top: 1px solid #e5e5e5;
+    padding: 10px 15px;
+}
+#primary .home-about article h3,
+#primary .home-news article h3 {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
 .entry-content p {
     padding-bottom: 18px;
 }
@@ -931,7 +988,7 @@ a:hover {
 }
 .news .entry-content .post .post-content {
     padding: 16px 20px;
-    max-height: 35px;
+    max-height: 53px;
     overflow: hidden;
 }
 .news .entry-content .post footer {
@@ -940,6 +997,9 @@ a:hover {
     border-width: 1px 0 0;
     padding: 9px 20px 8px;
     cursor: pointer;
+}
+.news .entry-content .post footer p {
+    padding: 0;
 }
 .news .entry-content .post footer .toggle {
     float: right;
@@ -975,6 +1035,9 @@ a:hover {
     border-radius: 4px;
     padding: 20px;
     float: left;
+}
+#primary .contact-us {
+    padding-bottom: 40px;
 }
 #primary .contact-us .contact-form {
     width: 310px;
@@ -1049,6 +1112,7 @@ a:hover {
 #primary .contact-us .contact-form .error_message {
     color: #d70000;
     text-align: right;
+    padding: 0;
 }
 #primary .contact-us .contact-form .thank-you h3 {
     font-weight: bold;
