@@ -86,6 +86,36 @@ jQuery(document).ready(function(){
 		jQuery(this).toggleClass("active");
 		return false;
 	});
+
+	jQuery(".news").on('click', '.post footer', function() {
+        var $this = jQuery(this),
+            $details = $this.siblings('.post-content'),
+            height = $details.height(),
+            newHeight;
+
+        if ($details.css('max-height') != 'none') {
+            $details.data('old-height', height);
+            newHeight = $details.css('max-height', 'none').height();
+            $details.css('height', height);
+            $details.animate({
+                height : newHeight
+            }, 500, function (){
+                $details.addClass('no-shadow');
+                $this.addClass('expanded');
+            });
+        } else {
+            $details.animate({
+                height: $details.data('old-height')
+            }, 500, function (){
+                $details.css({
+                    'max-height': $details.data('old-height'),
+                    height : 'auto'
+                }).removeClass('no-shadow');
+                $this.removeClass('expanded');
+            });
+
+        }
+	});
 });
 </script>
 

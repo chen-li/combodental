@@ -8,14 +8,17 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
 
-				<article class="post">
+				<article class="post news">
 					<header class="entry-header">
 						<h1 class="entry-title"><?php _e( 'News' ); ?></h1>
 					</header><!-- .entry-header -->
 
-                    <?php query_posts('post_type=post&post_status=publish&posts_per_page=2&paged='. get_query_var('paged')); ?>
+                    <?php query_posts('post_type=post&post_status=publish&posts_per_page=10&paged='. get_query_var('paged')); ?>
                     <div class="entry-content">
-                        <?php wpbeginner_numeric_posts_nav(); ?>
+
+                        <div class="page_numbers_top">
+                            <?php wpbeginner_numeric_posts_nav(); ?>
+                        </div>
                         <?php if ( have_posts() ) : ?>
 
                             <?php // twentyeleven_content_nav( 'nav-above' ); ?>
@@ -28,12 +31,19 @@ get_header(); ?>
                             <?php /* Start the Loop */ ?>
                             <?php while ( have_posts() ) : the_post(); ?>
 
-                                <div id="post-<?php get_the_ID(); ?>" <?php post_class(); ?>>
+                                <div <?php post_class(); ?>>
                                     <?php // the_permalink(); ?><?php // the_post_thumbnail( array(148,148) ); ?>
-                                    <h2><?php the_title(); ?></h2>
-                                    <?php the_content(); ?>
-                                    <p><strong><?php the_time('F jS, Y'); ?></strong></p>
-                                </div><!-- /#post-<?php get_the_ID(); ?> -->
+                                    <header>
+                                        <h2><?php the_title(); ?></h2>
+                                    </header>
+                                    <div class="post-content">
+                                        <?php the_content(); ?>
+                                    </div>
+                                    <footer>
+                                        <p class="toggle"><i class="icon-placeholder"></i></p>
+                                        <p class="publish-date"><strong><?php the_time('F jS, Y'); ?></strong></p>
+                                    </footer>
+                                </div>
 
                                 <?php // get_template_part( 'content', get_post_format() ); ?>
 
@@ -47,7 +57,10 @@ get_header(); ?>
                                 <?php // get_search_form(); ?>
                             </div><!-- .entry-content -->
                         <?php endif; ?>
-                        <?php wpbeginner_numeric_posts_nav(); ?>
+
+                        <div class="page_numbers_bottom">
+                            <?php wpbeginner_numeric_posts_nav(); ?>
+                        </div>
                         <?php wp_reset_query(); ?>
                     </div>
 				</article><!-- #post-0 -->

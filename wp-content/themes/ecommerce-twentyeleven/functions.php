@@ -182,6 +182,10 @@ function wpbeginner_numeric_posts_nav() {
     if ( get_previous_posts_link() )
         printf( '%s' . "\n", get_previous_posts_link() );
 
+    /** Next Post Link */
+    if ( get_next_posts_link() )
+        printf( '%s' . "\n", get_next_posts_link() );
+
     echo '<span class="numbers">';
     /** Link to first page, plus ellipses if necessary */
     if ( ! in_array( 1, $links ) ) {
@@ -218,10 +222,6 @@ function wpbeginner_numeric_posts_nav() {
         }
     }
     echo '</span>';
-
-    /** Next Post Link */
-    if ( get_next_posts_link() )
-        printf( '%s' . "\n", get_next_posts_link() );
 
     echo '</div>' . "\n";
 

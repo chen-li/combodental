@@ -446,6 +446,7 @@ a {
 a:focus,
 a:active,
 a:hover {
+    text-decoration: underline;
 }
 
 /* Assistive text */
@@ -844,6 +845,12 @@ a:hover {
     background-color: #2e85dc;
     font-weight: bold;
 }
+.page_numbers_top {
+    margin-bottom: 20px;
+}
+.page_numbers_bottom {
+    margin-bottom: 40px;
+}
 /* product listing page */
 #primary .wpsc-product .wpsc_container {
 }
@@ -898,9 +905,69 @@ a:hover {
     padding: 10px;
 }
 .single_product_display .productcol .product_description p {
-    padding: 0 0 20px;
+    padding: 0 0 18px;
 }
-
+/* news */
+.news .entry-content .post {
+    border-color: #E5E5E5 #E5E5E5 #0066CC;
+    border-style: solid;
+    border-width: 1px 1px 3px;
+    margin-bottom: 30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.news .entry-content .post header {
+    border-color: #E5E5E5;
+    border-style: solid;
+    border-width: 0 0 1px;
+    color: #999999;
+    padding: 10px 20px 9px;
+}
+.news .entry-content .post header h2 {
+    margin: 0;
+    font-size: 16px;
+}
+.news .entry-content .post .post-content {
+    padding: 16px 20px;
+    max-height: 35px;
+    overflow: hidden;
+}
+.news .entry-content .post .post-content p {
+    padding-bottom: 18px;
+}
+.news .entry-content .post footer {
+    border-color: #E5E5E5;
+    border-style: solid;
+    border-width: 1px 0 0;
+    padding: 9px 20px 8px;
+    cursor: pointer;
+}
+.news .entry-content .post footer .toggle {
+    float: right;
+    position: relative;
+}
+.news .entry-content .post footer .toggle .icon-placeholder {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    background-image: url(images/sprite-blue.png);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+.news .entry-content .post footer .toggle .icon-placeholder {
+    background-position: 0 -128px;
+}
+.news .entry-content .post footer.expanded .toggle .icon-placeholder {
+    background-position: -64px -128px;
+}
+.news .entry-content .post footer:hover .toggle .icon-placeholder {
+    background-position: -32px -128px;
+}
+.news .entry-content .post footer.expanded:hover .toggle .icon-placeholder {
+    background-position: -96px -128px;
+}
 .hentry,
 .no-results {
 }
