@@ -1054,6 +1054,10 @@ class Walker_Page extends Walker {
 			$css_class[] = 'current_page_parent';
 		}
 
+        if (($page->post_title == 'Products') && (get_query_var( 'wpsc_product_category' ) || wpsc_is_single_product())) {
+            $css_class[] = 'current_page_item';
+        }
+
 		$css_class = implode( ' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) );
 
 		if ( '' === $page->post_title )
