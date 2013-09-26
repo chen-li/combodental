@@ -71,7 +71,7 @@
 
                         <?php if(wpsc_show_fb_like()): ?>
                             <div class="FB_like">
-                            <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo urlencode(wpsc_the_product_permalink()); ?>&amp;width=350&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;send=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:350px; height:80px;" allowTransparency="true"></iframe>
+                            <iframe src="//www.facebook.com/plugins/like.php?href=<?php echo urlencode(wpsc_the_product_permalink()); ?>&amp;width=320&amp;height=80&amp;colorscheme=light&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;send=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:320px; height:80px;" allowTransparency="true"></iframe>
                             </div><!--close FB_like-->
                         <?php endif; ?>
 

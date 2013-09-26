@@ -968,13 +968,13 @@ a:hover {
     width: 350px;
 }
 .single_product_display .productcol .imagecol img {
-    margin: 0 0 20px 20px;
+    margin: 0 0 20px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
 .single_product_display .productcol .wpsc_product_price {
-    width: 322px;
+    width: 300px;
     background-color: #E2E2E2;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -983,6 +983,9 @@ a:hover {
 }
 .single_product_display .productcol .wpsc_product_price p {
     padding: 0;
+}
+.single_product_display .productcol .product_description {
+    width: 320px;
 }
 
 /* news */
