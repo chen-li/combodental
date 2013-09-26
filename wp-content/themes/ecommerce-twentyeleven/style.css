@@ -2777,17 +2777,12 @@ p.comment-form-comment {
 @media (max-width: 800px) {
 	/* Simplify the basic layout */
 	#main #content {
-		margin: 0 7.6%;
-		width: auto;
 	}
 	#nav-below {
 		border-bottom: 1px solid #ddd;
 		margin-bottom: 1.625em;
 	}
 	#main #secondary {
-		float: none;
-		margin: 0 7.6%;
-		width: auto;
 	}
 	/* Simplify the showcase template */
 	.page-template-showcase-php .featured-posts {
