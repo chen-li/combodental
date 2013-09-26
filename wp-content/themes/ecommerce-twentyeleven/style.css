@@ -918,14 +918,24 @@ a:hover {
 .wpsc_default_product_list .productcol p {
     padding: 0;
 }
+.wpsc_default_product_list .productcol .wpsc_product_price .wpsc-product-old-price,
+.wpsc_default_product_list .productcol .wpsc_product_price .wpsc-product-you-save {
+    font-size: 10px;
+}
+.wpsc_default_product_list .productcol .wpsc_product_price .wpsc-product-price {
+    font-weight: bold;
+}
 .wpsc_default_product_list .default_product_display {
     float: left;
     margin: 0 6px 13px;
-	border: 1px solid #CCC;
+	border: 1px solid #fff;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     width: 148px;
+}
+.wpsc_default_product_list .default_product_display:hover {
+	border-color: #ccc;
 }
 .wpsc_default_product_list .default_product_display .imagecol {
     margin-bottom: 5px;
@@ -941,9 +951,12 @@ a:hover {
     width: 148px;
     height: 74px;
     overflow: hidden;
+    text-align: center;
 }
 .wpsc_default_product_list .default_product_display .productcol .prodtitle {
     font-weight: bold;
+    max-height: 30px;
+    overflow: hidden;
 }
 .wpsc-product-old-price {
     color: #979797;
@@ -2149,19 +2162,22 @@ section.recent-posts .other-recent-posts li:after {
 .product_category {
     float: left;
     margin: 0 6px 30px;
-	border: 1px solid #CCC;
+	border: 1px solid #fff;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     width: 148px;
-    height: 196px;
-    padding: 6px;
-    overflow: hidden;
+    padding: 6px 6px 0;
+}
+.product_category:hover {
+	border-color: #CCC;
 }
 .product_category .product_category_name {
     text-align: center;
-    padding: 10px 0;
+    margin: 10px 0;
     font-weight: bold;
+    height: 29px;
+    overflow: hidden;
 }
 .product_category .wpsc_category_grid_item img {
     -webkit-border-radius: 5px 5px 0 0;
