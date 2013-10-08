@@ -138,7 +138,7 @@ jQuery(document).ready(function(){
         <div id="header">
 
 			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class="tcpt-logo"><?php bloginfo( 'name' ); ?></span></a></span></h1>
+				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span class="tcpt-logo"><?php // bloginfo( 'name' ); ?><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" /></span></a></span></h1>
 
                 <div class="contact">
                     <p>

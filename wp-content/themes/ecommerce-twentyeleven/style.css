@@ -490,7 +490,7 @@ a:hover {
     height: 183px;
 }
 #site-title {
-	padding: 3.65625em 0 0;
+	padding: 0;
 }
 #site-title a {
 	color: #ffffff;
@@ -503,6 +503,9 @@ a:hover {
 #site-title a:focus,
 #site-title a:active {
 	text-decoration: underline;
+}
+#site-title .tcpt-logo img {
+    margin: 24px 0 0 80px;
 }
 #header .contact {
     position: absolute;
