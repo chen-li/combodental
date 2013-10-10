@@ -1,0 +1,5 @@
+UPDATE `wp_posts` SET `guid` = REPLACE( `guid` , 'combodental.localhost', 'www.combodental.com.au' );
+
+UPDATE `wp_posts` SET `post_content` = REPLACE( `post_content` , 'combodental.localhost', 'www.combodental.com.au' );
+
+UPDATE `wp_postmeta` SET `meta_value` = REPLACE( `meta_value` , 'combodental.localhost', 'www.combodental.com.au' );
