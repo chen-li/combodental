@@ -25,7 +25,7 @@ float: left;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     margin-right: 10px;
-}
+}  
 .wpdm-only-button .btn_outer{
     margin-top: 5px;
 }
@@ -82,7 +82,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', end
     font-size:10pt;
     font-family: Tahoma;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: uppercase;    
 
 }
 .download_link a{
@@ -99,7 +99,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', end
 
 .wpdm_file h3{
    padding:0px 10px;
-   font-size: 12pt;
+   font-size: 12pt; 
+   font-family: 'Lucida Grande','Lucida Sans';
    text-transform: capitalize;
    line-height: normal;
 }
@@ -137,17 +138,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', end
 .myorder th{font-weight:bold;text-align: left;font-size:10pt;}
 .myorder tr.items td{text-align: left;font-size:9pt;}
 .myorder tr.item td{font-size: 8pt;}
-
+                                      
 .btn_left{
     margin-right: 5px;
-}
-
+}                                      
+                                      
 .wpdm_category .thumb{
-
+    
     -moz-box-shadow: 0 0 5px #888;
     -webkit-box-shadow: 0 0 5px#888;
     box-shadow: 0 0 5px #888;
-
+    
 }
 .wpdm_category .thumb{
     float:left;
@@ -175,7 +176,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', end
 
 #mytable caption {
     padding: 0 0 5px 0;
-    width: 700px;
+    width: 700px;     
     font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
     text-align: right;
 }
@@ -237,7 +238,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', end
 .ind-download{
     position:inline-block;
     background: url(../images/download-16.png) left center no-repeat;
-    padding-left:20px;
+    padding-left:20px;    
 }
 
 
@@ -258,7 +259,7 @@ margin-bottom: 10px;
 .wpdm-facebook h3{
     margin:0px !important;
     padding:4px 10px !important;
-    background: #3B5998 !important;
+    background: #3B5998 !important;    
     color:#ffffff !important;
     font-family: 'Lucida Grande','Lucida Sans' !important;
     font-size:12pt;
@@ -273,13 +274,20 @@ border-top-right-radius: 1px;
 }
 
 .wpdm_file .cont{
-    padding:5px 10px;
+    padding:5px 10px;    
+    -webkit-border-bottom-right-radius: 3px;
+-webkit-border-bottom-left-radius: 3px;
+-moz-border-radius-bottomright: 3px;
+-moz-border-radius-bottomleft: 3px;
+border-bottom-right-radius: 3px;
+border-bottom-left-radius: 3px;
+font-size: 9pt;
 }
 
 
 
 
-
+ 
 .wpdm-facebook .btn_left {
     background: #3b5998;
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNiNTk5OCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM1NDc3YmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -290,7 +298,7 @@ background: -o-linear-gradient(top,  #3b5998 0%,#5477bf 100%);
 background: -ms-linear-gradient(top,  #3b5998 0%,#5477bf 100%);
 background: linear-gradient(top,  #3b5998 0%,#5477bf 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', endColorstr='#5477bf',GradientType=0 );
-    font-weight: bold;
+    font-weight: bold;  
     -webkit-border-top-left-radius: 4px;
     -webkit-border-bottom-left-radius: 4px;
     -moz-border-radius-topleft: 4px;
@@ -302,11 +310,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
     font-size: 10pt;
     padding: 5px 10px;
     letter-spacing: 0.5px;
-    text-shadow: 0 1px 0 #000;
+    text-shadow: 0 1px 0 #000;        
 }
-
+ 
 .wpdm-facebook .cont {
-    background: #fff;
+    background: #fff;  
 }
 .wpdm-facebook .btn_outer {
     background: none repeat scroll 0 0 #D6E3FF;
@@ -314,13 +322,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    float: left;
+    float: left;    
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 20px;
     padding: 0;
 }
-
+ 
 .wpdm-facebook .btn_right {
     display: block;
     float: left;
@@ -338,82 +346,82 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
  .passit {
      color:#800000;
      font-style: italic;
- }
+ } 
  .perror{ color: #aa0000; padding-left:10px;}
  .inf{
      padding:4px;
      font-size:8pt;
      font-family: 'Lucida Grande','Lucida Sans';
  }
-
-
+ 
+ 
  /* Shared styles */
-
+        
         .drop-shadow {
             position:relative;
-
+            
         }
 
         .drop-shadow:before,
         .drop-shadow:after {
             content:"";
-            position:absolute;
+            position:absolute; 
             z-index:-2;
         }
-
+        
         .drop-shadow p {
             font-size:16px;
             font-weight:bold;
         }
-
-
-
+        
+ 
+ 
  /* Lifted corners */
 
         .lifted {
-            -moz-border-radius:4px;
+            -moz-border-radius:4px; 
                  border-radius:4px;
         }
-
+        
         .lifted:before,
-        .lifted:after {
+        .lifted:after { 
             bottom:15px;
             left:10px;
             width:50%;
             height:20%;
             max-width:300px;
-            -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+            -webkit-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);   
                -moz-box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
                     box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
-            -webkit-transform:rotate(-3deg);
-               -moz-transform:rotate(-3deg);
-                -ms-transform:rotate(-3deg);
+            -webkit-transform:rotate(-3deg);    
+               -moz-transform:rotate(-3deg);   
+                -ms-transform:rotate(-3deg);   
                  -o-transform:rotate(-3deg);
                     transform:rotate(-3deg);
         }
-
+        
         .lifted:after {
-            right:10px;
+            right:10px; 
             left:auto;
-            -webkit-transform:rotate(3deg);
-               -moz-transform:rotate(3deg);
-                -ms-transform:rotate(3deg);
+            -webkit-transform:rotate(3deg);   
+               -moz-transform:rotate(3deg);  
+                -ms-transform:rotate(3deg);  
                  -o-transform:rotate(3deg);
                     transform:rotate(3deg);
         }
-
-
-
+        
+        
+        
 /* Raised shadow - no pseudo-elements needed */
-
+        
         .raised {
             -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
                -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
                     box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
         }
-
+        
         /* Curved shadows */
-
+         
         .curved:before {
             top:10px;
             bottom:10px;
@@ -425,11 +433,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
             -moz-border-radius:10px / 100px;
             border-radius:10px / 100px;
         }
-
+        
         .curved-vt-2:before {
             right:0;
         }
-
+        
         .curved-hz-1:before {
             top:50%;
             bottom:0;
@@ -447,20 +455,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
             -moz-border-radius:100px / 10px;
             border-radius:100px / 10px;
         }
-
+        
         /* Rotated box */
-
+        
         .rotated {
             -webkit-box-shadow:none;
                -moz-box-shadow:none;
                     box-shadow:none;
-            -webkit-transform:rotate(-3deg);
-               -moz-transform:rotate(-3deg);
+            -webkit-transform:rotate(-3deg);    
+               -moz-transform:rotate(-3deg);   
                 -ms-transform:rotate(-3deg);
                  -o-transform:rotate(-3deg);
                     transform:rotate(-3deg);
         }
-
+        
         .rotated > :first-child:before {
             content:"";
             position:absolute;
@@ -474,10 +482,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
                -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
                     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
         }
-
-
+        
+        
         .wpdm-bluebox{
-           border:1px solid #30aedc;
+           border:1px solid #30aedc;  
            -webkit-border-radius: 8px;
             -moz-border-radius: 8px;
             border-radius: 8px;
@@ -497,24 +505,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
 
             text-align: center;
         }
-
+        
         .wpdm-bluebox h3{
             padding: 4px 10px;
             font-size:12pt;
             font-family: 'Lucida Grande','Lucida Sans';
             margin-bottom: 0px;
-
+             
         }
         .wpdm-bluebox .cont{
            background: #ffffff url(../images/content-shadow.png) center -2px no-repeat;
            text-align: left;
-           padding-top: 10px;
+           padding-top: 10px; 
            padding-bottom: 10px;
            -webkit-border-radius: 8px;
             -moz-border-radius: 8px;
             border-radius: 8px;
         }
-
+        
         .wpdm-bluebox .passit{
             margin-bottom: 10px;
         }
@@ -534,17 +542,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
             padding:4px 10px;
             color: #ffffff;
             margin: 4px;
-
+            
 
         }
-
+        
  #TB_ajaxContent p{
      font-size:10pt;
  }
  #TB_ajaxContent h1{
      font-size:16pt;
  }
-
+ 
  .wpdm-category {
      list-style: none;
      margin: 0px !important;
@@ -561,23 +569,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b5998', end
      margin-left: 0px !important;
      min-height: 32px;
  }
-
+ 
  .wpdm_clink{
      background: url('../icon/download.png') left top no-repeat;
-     padding-left: 35px;
+     padding-left: 35px;     
      line-height: normal;
  }
  .wpdm_clink small{
      font-size:8pt;
  }
-
-
+ 
+ 
  /**
  * pagination
  */
-
+ 
  div.pagination {
-    font-size: 14px;
+    font-size: 14px;     
     padding:2px;
     background-color:#c1c1c1;
 }
@@ -588,7 +596,7 @@ div.pagination a {
     background-color:#eeeeee;
     text-decoration: none; /* no underline */
     color: #000;
-
+     
 }
 div.pagination a:hover, div.pagination a:active {
     background-color:#444444;
@@ -600,7 +608,7 @@ div.pagination span.current {
         font-weight: bold;
         background-color: #fff;
         color: #303030;
-
+        
     }
 div.pagination span.disabled {
         padding: 2px 5px 2px 5px;
@@ -608,4 +616,5 @@ div.pagination span.disabled {
         background-color:#c1c1c1;
         color: #797979;
     }
-
+ 
+ 
