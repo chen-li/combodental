@@ -31,8 +31,9 @@ get_header(); ?>
                 }
 
                 if ( empty($validation_errors) ) {
+                    $email = 'info@combodental.com.au';
                     $email_subject = "[" . get_bloginfo( 'name' ) . "] Contact Us Form.";
-                    $email_message = $form_data['wpcu_message'] . "\n\nFrom: " . $form_data['wpcu_name'] . "\n\nIP: " . wptuts_get_the_ip();
+                    $email_message = $form_data['wpcu_message'] . "\n\nFrom: " . $form_data['wpcu_name'] . " <" . $form_data['wpcu_email'] .">\n\nIP: " . wptuts_get_the_ip();
                     $headers  = "From: " . $form_data['wpcu_name'] . " <" . $form_data['wpcu_email'] . ">\n";
                     $headers .= "Content-Type: text/plain; charset=UTF-8\n";
                     $headers .= "Content-Transfer-Encoding: 8bit\n";
